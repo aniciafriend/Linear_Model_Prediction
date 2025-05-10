@@ -94,6 +94,18 @@ model2<- lm(SIMS~GRIP,data=data)
 summary.lm(model2)
 ```
 
+
+```{r}
+predict(model2,target,interval=c("prediction"))
+```
+
+
+```{r}
+predict(model2,target,interval=c("confidence"))
+```
+
+
+
 The adjusted R squared form SIMS vs ARM is bigger than SIMS vs GRIP. 
 
 
