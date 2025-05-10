@@ -28,3 +28,14 @@ basiccNN<- ggplot(data,aes(y=SIMS,x=ARM))
 ```{r}
 basiccNN +geom_point()  +ggtitle("SIMS vs ARM")
 ```
+
+The scatterplot of SIMS versus ARM shows an upward trend, indicating that as ARM increases, SIMS tends to increase as well.  
+
+
+
+
+
+
+
+
+
