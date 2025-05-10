@@ -101,7 +101,7 @@ The adjusted R squared form SIMS vs ARM is bigger than SIMS vs GRIP.
 basiccNN2 +geom_point()  +ggtitle("SIMS vs GRIP") +geom_smooth(method=lm)
 ```
 
-### Model13 SIMS~ARM+GRIP
+### Model3 SIMS~ARM+GRIP
 
 
 ```{r}
@@ -120,4 +120,33 @@ summary.lm(model3)
 
 Our eqation is SIMS= -5.43387 +0.03731*ARM +0.2447*GRIP. That is the line in 3D space. 
 
+```{r}
+predict(model3,target,interval=c("prediction"))
+```
+
+
+```{r}
+predict(model3,target,interval=c("confidence"))
+```
+
+The prediction interval for model3 is -2.2 to 2.4, and the confidence interval is -0.23 to 0.48. 
+
+### ANOVA test for model1 and model3
+
+
+```{r}
+anova(model1,model3)
+```
+
+
+```{r}
+anova(model2,model3)
+```
+
+```{r}
+anova(model1,model2)
+```
+
+
+Model 1 is nested within Model 3, and Model 2 is also nested within Model 3. Because the models are nested, we can use an ANOVA test to compare them. The results show low p-values, indicating significant differences. However, if the models were not nested, the ANOVA test would not be appropriate.
 
