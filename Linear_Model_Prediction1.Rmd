@@ -31,7 +31,18 @@ basiccNN +geom_point()  +ggtitle("SIMS vs ARM")
 
 The scatterplot of SIMS versus ARM shows an upward trend, indicating that as ARM increases, SIMS tends to increase as well.  
 
+### Numerical Results
 
+```{r}
+cor(SIMS~ARM,data=data)
+```
+
+### Inferential Results
+
+```{r}
+model1<- lm(SIMS~ARM,data=data)
+summary.lm(model1)
+```
 
 
 
