@@ -44,7 +44,20 @@ model1<- lm(SIMS~ARM,data=data)
 summary.lm(model1)
 ```
 
+### Target Dataframe
 
+```{r}
+target<-data.frame(ARM=90,GRIP=90)
+```
+
+```{r}
+predict(model1,target,interval=c("prediction"))
+```
+
+
+```{r}
+predict(model1,target,interval=c("confidence"))
+```
 
 
 
