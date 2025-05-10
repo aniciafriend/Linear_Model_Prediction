@@ -97,6 +97,8 @@ summary.lm(model2)
 The adjusted R squared form SIMS vs ARM is bigger than SIMS vs GRIP. 
 
 
-
+```{r}
+basiccNN2 +geom_point()  +ggtitle("SIMS vs GRIP") +geom_smooth(method=lm)
+```
 
 
