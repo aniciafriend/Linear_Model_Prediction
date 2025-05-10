@@ -101,4 +101,23 @@ The adjusted R squared form SIMS vs ARM is bigger than SIMS vs GRIP.
 basiccNN2 +geom_point()  +ggtitle("SIMS vs GRIP") +geom_smooth(method=lm)
 ```
 
+### Model13 SIMS~ARM+GRIP
+
+
+```{r}
+cor(SIMS~ARM,data=data)
+cor(SIMS~GRIP,data=data)
+cor(SIMS~ARM+GRIP,data=data)
+```
+
+### Inferential Results Model 3
+
+
+```{r}
+model3<- lm(SIMS~GRIP,data=data)
+summary.lm(model3)
+```
+
+Our eqation is SIMS= -5.43387 +0.03731*ARM +0.2447*GRIP. That is the line in 3D space. 
+
 
