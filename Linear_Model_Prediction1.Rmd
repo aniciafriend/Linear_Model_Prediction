@@ -59,15 +59,12 @@ predict(model1,target,interval=c("prediction"))
 predict(model1,target,interval=c("confidence"))
 ```
 
+### Linear fit Model 1
+
 
 ```{r}
-armmod <- lm(SIMS ~ ARM, data = data)
-plot(SIMS ~ ARM, data = data)
-abline(armmod, col = "red")
-summary(armmod)
+basiccNN +geom_point()  +ggtitle("SIMS vs ARM") +geom_smooth(method=lm)
 ```
-
-
 
 
 ### Model2: SIMS~GRIP
@@ -100,11 +97,6 @@ summary.lm(model2)
 The adjusted R squared form SIMS vs ARM is bigger than SIMS vs GRIP. 
 
 
-```{r}
-gripmod <- lm(SIMS ~ GRIP, data = data)
-plot(SIMS ~ GRIP, data = data)
-abline(armmod, col = "red")
-summary(armmod)
-```
+
 
 
